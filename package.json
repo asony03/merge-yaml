@@ -1,0 +1,19 @@
+{
+  "name": "merge-yaml",
+  "version": "1.0.0",
+  "description": "A script to merge yaml files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Amal Sony",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.12.2",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}

@@ -1,0 +1,8 @@
+todo:
+  dishes:
+    case1:
+      priority: "high"
+  laundry:
+    priority: low
+arr: ["car", "pony"]
+ghf: "sfe"
