@@ -5,7 +5,17 @@ const _ = require('lodash');
 
 //Starting from the directory of the target file, go up the hierarchy to find all the files to merge and add their paths to an array.
 var get_paths = function(target_file) {
-  var target_file_path = path.resolve(target_file);
+  var target_file_path;
+  try {
+    target_file_path = path.resolve(target_file);
+    fs.accessSync(target_file_path, fs.constants.F_OK);
+    var allowed_extensions = ['.yml','.yaml'];
+    if(!allowed_extensions.includes(path.extname(target_file_path).toLowerCase()))
+      throw new Error("Target file should be a yaml file");
+  } catch(error) {
+    process.stdout.write(error+"\n");
+    process.exit();
+  }
   var target_file_name = target_file_path.split(path.sep).pop();
   var cur_dir = path.dirname(target_file_path);
   var parent_dir = path.dirname(cur_dir);
