@@ -24,5 +24,13 @@ describe('get_paths()', function () {
     expect(expected).to.eql(actual);
   });
 
-  it('')
+  it('should validate the file path', function() {
+    var file_path = path.resolve('./test/fixtures/input4.yml');
+    expect(() => get_paths('./test/fixtures/input4.yml')).to.throw('ENOENT: no such file or directory, access \'' + file_path + '\'');
+  });
+
+  it('should validate the file type', function() {
+    expect(() => get_paths('./test/fixtures/dir1/dir2/dir3/dir4/input3.txt')).to.throw('Target file should be a yaml file');
+  });
+
 });
