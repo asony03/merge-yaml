@@ -1,7 +1,12 @@
 todo:
   vacuum:
-    priority: high
+    priority: "high"
   dishes:
-    priority: low
-arr: 
-ghf:
+    type1:
+      priority: "low"
+    type2:
+      priority: "low"
+    type3:
+      priority: "high"
+arr: ["truck"]
+weather:

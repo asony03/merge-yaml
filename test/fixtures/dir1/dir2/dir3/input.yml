@@ -1,8 +1,10 @@
 todo:
   dishes:
-    case1:
+    type1:
       priority: "high"
+    type3:
+      priority:
   laundry:
     priority: low
-arr: ["car", "pony"]
-ghf: "sfe"
+arr: ["car", "bus"]
+weather: ["sunny", "windy", "rainy"]

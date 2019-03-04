@@ -1,0 +1,21 @@
+Greeting: Hello
+todo:
+  dishes:
+    type1:
+      priority: low
+    type3:
+      priority: high
+    type2:
+      priority: low
+  laundry:
+    priority: low
+  vacuum:
+    priority: high
+arr:
+  - car
+  - bus
+  - truck
+weather:
+  - sunny
+  - windy
+  - rainy
