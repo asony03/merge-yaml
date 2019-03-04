@@ -1,6 +1,6 @@
-var expect = require('chai').expect;
-var get_paths = require('../util.js').get_paths;
-var path = require('path');
+const expect = require('chai').expect;
+const get_paths = require('../util.js').get_paths;
+const path = require('path');
 
 describe('get_paths()', function () {
   it('should return the desired file paths [1. Recursively go up until the file is missing in the parent or it has reached the root. 2. Ignore sibling directories. ]', function () {
