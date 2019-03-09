@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 6.7.0
+- "node"
 deploy:
   provider: npm
   email: amalsony03@gmail.com
