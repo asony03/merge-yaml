@@ -1,13 +1,21 @@
 {
-  "name": "merge-yaml",
+  "name": "@asony03/merge-yaml",
   "version": "1.0.0",
   "description": "A script to merge yaml files",
-  "main": "index.js",
+  "main": "util.js",
+  "bin": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "author": "Amal Sony",
   "license": "ISC",
+  "files": [
+    "index.js",
+    "util.js"
+  ],
+  "engines": {
+    "node": ">= 6.7.0"
+  },
   "dependencies": {
     "js-yaml": "^3.12.2",
     "lodash": "^4.17.11"

@@ -1,3 +1,9 @@
 language: node_js
-node_js:  
-  - "node"
+node_js:
+- 6.7.0
+deploy:
+  provider: npm
+  email: amalsony03@gmail.com
+  api_key:
+    secure: ji5De8YY7ZLTAVSwlxBPm7OkViV44IguXWl97F0nDNEZAXW3oTcjIzhRu/NSsQgeZ1Myy3RR+q97/284VC8J0UziC9/fwH01JcLRh/jPF4/VhABKvlfLqyj8KyFPKGPg3HpysNpo1TtTNorvBTt2aepqUrHdbn81RWejr6ksMJYNJz4mspsWGQdjvb+bqFZhWk1HLD/Nlb7IfYhr39Njvg1sYRj9swd7Y5UMDHZ3rZ/Zz3eE9MMefvRWJ3Cmepub9TWbccZDL9KtT17j93PmtMDlfIrcCI7mQ1/T4QgNGq7LOpOqcIxZZJfwMJrkR5290nC3RywjKc7YYPFVeJ4F5/h8rWj4rif4mRjr4S0ovK9EeWOPC0D42tfdtrOq+77FTX9gesukGI2UvWAsFWX2cMm//IxSE+bv0EXKhFAL0pklgYmXr13ed9XRWWINsXJWM/FQj6dDtR87Bwc0kvIK6PlyVru/rLIsPcrxeL5Hh1KzWoJBVUp+R9kif1JkKgLXpN6iiJLIVZih8/nPewiOySizReXHlkp8zUXCIgVTVUVvLwxhhV4uWF/6nv2ys/rYKEBpOVJv2JvEJMjgeGTB54xW7Y6TWAy+UNxoxb+koOW1h9GhNR1peXY/cOPfwry5RdrU6zbDobB4sOn4wYcj4qrjhoTNNX85HxayD2dTWU4=
+  skip_cleanup: true
