@@ -1,4 +1,6 @@
-var util = require('./util.js');
+#!/usr/bin/env node
+
+const util = require('./util.js');
 
 var target_file_path = process.argv[2];
 var files_to_consider;
