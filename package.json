@@ -1,6 +1,6 @@
 {
   "name": "@asony03/merge-yaml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A script to merge yaml files",
   "main": "util.js",
   "bin": "index.js",
