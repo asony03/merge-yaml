@@ -22,26 +22,28 @@ Input:
 ```bash
 test/fixtures/dir1/dir2/dir3/dir4/input.yml
 ```
-```bash
-todo:
-  vacuum:
-    priority: "high"
-  dishes:
-    type1:
-      priority: "low"
-    type2:
-      priority: "low"
-    type3:
-      priority: "high"
-arr: ["truck"]
-weather:
-```
 The follwing files will be merged in the order top to bottom.
 ```bash
 test/fixtures/dir1/dir2/dir3/dir4/input.yml
 test/fixtures/dir1/dir2/dir3/input.yml
 test/fixtures/dir1/dir2/input.yml
 test/fixtures/dir1/input.yml
+```
+```bash
+dir1/dir2/dir3/dir4/input.yml   dir1/dir2/dir3/input.yml    dir1/dir2/input.yml   dir1/input.yml
+-----------------------------   ------------------------    -------------------   --------------
+todo:                           todo:                       Greeting: "Hello"
+  vacuum:                         dishes:
+    priority: "high"                type1:
+  dishes:                             priority: "high"
+    type1:                          type3:                                     
+      priority: "low"                 priority:
+    type2:                        laundry:
+      priority: "low"               priority: low
+    type3:                      arr: ["car", "bus"]
+      priority: "high"          weather: ["sunny", "windy", "rainy"] 
+arr: ["truck"]                                                      
+weather:                                                                                     
 ```
 Output:
 ```
@@ -58,14 +60,8 @@ todo:
     priority: low
   vacuum:
     priority: high
-arr:
-  - car
-  - bus
-  - truck
-weather:
-  - sunny
-  - windy
-  - rainy
+arr: ["car", "bus", "truck"]
+weather: ["sunny", "windy", "rainy"]
   ```
   
   The files will be recursively merged until the parent directory does not have a file with the same name(and type) or if the root is reached. 
@@ -76,7 +72,7 @@ While merging, for string, int and float values, the child value overrides the p
 ```bash
 npm install --save @asony03/merge-yaml
 ```
-```bash 
+```javascript 
 const recursive_merge = require('merge-yaml').recursive_merge;
 
 var merged_output = recursive_merge('<target_file_path>');
