@@ -3,6 +3,18 @@ const fs = require('fs');
 const path = require('path');
 const _ = require('lodash');
 
+var recursive_merge = function(target_file) {
+  var files_to_consider;
+  try {
+    files_to_consider = get_paths(target_file);
+  } catch(error) {
+    process.stdout.write(error+"\n");
+    process.exit();
+  }
+  var merged_output = merge(files_to_consider);
+  return merged_output;
+}
+
 //Starting from the directory of the target file, go up the hierarchy to find all the files to merge and add their paths to an array.
 var get_paths = function(target_file) {
 
@@ -48,3 +60,4 @@ var customizer = function(objValue, srcValue) {
 
 exports.get_paths = get_paths;
 exports.merge = merge;
+exports.recursive_merge = recursive_merge;
